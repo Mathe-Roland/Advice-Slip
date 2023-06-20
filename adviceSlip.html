@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Response as Text Message</title>
+    <script>
+        function fetchData() {
+            // Make an API request
+            fetch('https://api.adviceslip.com/advice')
+                .then(response => response.json())
+                .then(data => {
+                    // Update the text message with the API response
+                    document.getElementById('message').innerText = data.slip.advice;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="align-c inline j-c-c vh100 white">
+        <div class="border inline j-c-c">
+
+            <h1>API Response as Text Message</h1>
+            <p id="message">Waiting for API response...</p>
+            <button onclick="fetchData()">Click to Fetch Data</button>
+        </div>
+
+    </div>
+</body>
+</html>

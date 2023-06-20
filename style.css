@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+}
+
+.align-c{
+    align-items: center;
+}
+
+.inline{
+    display: flex;
+    flex-direction: column;
+}
+
+.j-c-c{
+    justify-content: center;
+}
+
+.vh100{
+    height: 100vh;
+}
+
+.white{
+    color:white;
+}
+
+
+.border{
+
+    border: 1px solid white;
+}
